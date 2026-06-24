@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Arecanut Grading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #25a517ff;
+      padding: 15px 40px;
+    }
+    .navbar .logo { color: white; font-weight: bold; font-size: 20px; }
+    .navbar a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
+    .navbar a:hover { text-decoration: underline; }
+
+    .dashboard {
+      background: linear-gradient(to right, #f0f2f5, #e6ecf0);
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    .dashboard .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      width: 100%; max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .dashboard h2 { color: #2d3436; margin-bottom: 20px; font-size: 26px; font-weight: 600; }
+    .dashboard input[type="file"] { margin: 10px 0 20px 0; font-size: 16px; }
+    .dashboard button {
+      background: #25a517ff; color: white;
+      padding: 12px 30px; border: none; border-radius: 8px;
+      font-size: 16px; font-weight: 600; cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+    }
+    .dashboard button:hover { background: #005edc; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">🌰 Arecanut Grading</div>
+    <div>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('dashboard') }}">Upload</a>
+      <a href="{{ url_for('history') }}">History</a>
+    </div>
+  </div>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard">
+    <div class="container">
+      <h2>Upload Arecanut Image</h2>
+      <form action="{{ url_for('result') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br>
+        <button type="submit">Upload & Predict</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

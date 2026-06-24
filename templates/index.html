@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arecanut Grading App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;   /* keeps navbar fixed */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #25a517ff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .logo-img {
+      height: 30px;       /* adjust logo size */
+      margin-right: 10px; /* space between image and text */
+    }
+
+    .navbar a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Home */
+    .home {
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 70px; /* offset so content doesn’t hide behind navbar */
+    }
+
+    .home img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .home .overlay {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.6);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='arecanut_logo.jpg') }}" alt="Logo" class="logo-img">
+      ArecaGrade
+    </div>
+    <div>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('history') }}">History</a>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home">
+    <img src="{{ url_for('static', filename='new_image1.png') }}" alt="Background">
+  </section>
+
+</body>
+</html>

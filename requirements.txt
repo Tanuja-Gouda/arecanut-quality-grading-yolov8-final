@@ -1,0 +1,34 @@
+# # Flask + templating
+# flask==2.3.3
+
+# # YOLOv8 and dependencies
+# ultralytics==8.3.198
+# torch==2.0.1
+# torchvision==0.15.2
+
+# # Image processing
+# pillow==10.0.0
+# opencv-python==4.8.1.78
+
+# # Utils
+# numpy==1.25.0
+# matplotlib==3.7.2
+
+# # Database (SQLite is built-in, so no extra library needed)
+
+
+# Flask + templating
+flask==2.3.3
+
+# YOLOv8 and dependencies - versions for Python 3.12
+ultralytics==8.2.77
+torch==2.2.1
+torchvision==0.17.1
+
+# Image processing
+pillow==10.2.0
+opencv-python==4.9.0.80
+
+# Utils
+numpy==1.26.4
+matplotlib==3.8.2

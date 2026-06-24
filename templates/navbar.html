@@ -1,0 +1,31 @@
+<nav>
+  <ul>
+    <li><a href="{{ url_for('index') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
+    <li><a href="{{ url_for('dashboard') }}" class="{% if active_page == 'dashboard' %}active{% endif %}">Dashboard</a></li>
+    <li><a href="{{ url_for('history') }}" class="{% if active_page == 'history' %}active{% endif %}">History</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    background: #25a517;
+    padding: 12px 20px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  nav a.active {
+    color: yellow;
+    font-weight: 700;
+    border-bottom: 2px solid yellow;
+  }
+</style>
