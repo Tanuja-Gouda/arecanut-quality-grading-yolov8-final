@@ -32,3 +32,5 @@ opencv-python==4.9.0.80
 # Utils
 numpy==1.26.4
 matplotlib==3.8.2
+
+gunicorn==23.0.0
