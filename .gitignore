@@ -82,10 +82,15 @@ weights/
 
 # =========================
 
+
 *.jpg
 *.jpeg
 *.png
 *.HEIC
+
+!static/*.png
+!static/*.jpg
+!static/*.jpeg
 
 # =========================
 
